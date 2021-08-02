@@ -14,10 +14,14 @@ The model file provided here is trained on only iPhone data and no augmentations
 ## Dataset details
 The dataset is available on registration from [here](https://gazecapture.csail.mit.edu/download.php)
 
-The raw dataset is HUGE ~135GB of data. Use the [prepareDataset](Utils/prepareDataset.py) script to convert the dataset to a more usable (and smaller) version. 
+The raw dataset is HUGE ~135GB. Use the [prepareDataset](Utils/prepareDataset.py) script to convert the dataset to a more usable (and smaller) form. 
 
 Models provided are trained on only iPhone data. 
-Total number of files: 1,272,185
-Number of train files: 1,076,797
-Number of validation files: 51,592
-Number of test files: 143,796
+
+* Total number of files: 1,272,185
+
+* Number of train files: 1,076,797
+
+* Number of validation files: 51,592
+
+* Number of test files: 143,796
