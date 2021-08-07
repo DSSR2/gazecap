@@ -37,4 +37,4 @@ echo copy done
 ls
 cd gazecap
 
-python gazecap_train.py --dataset_dir ../gazecap_my/ --save_dir ~/projects/def-skrishna/dssr/trained_models/gazecap_my/ --checkpoint  ./checkpoints/checkpoint.ckpt --comet_name gazecap_my --gpus 2 --epochs 100 --workers 18 --bs 300
+python gazecap_train.py --dataset_dir ../gazecap_my/ --save_dir ~/projects/def-skrishna/dssr/trained_models/gazecap_my/ --checkpoint  ./checkpoints/checkpoint.ckpt --comet_name gazecap_my --gpus 2 --epochs 25 --workers 18 --bs 300
