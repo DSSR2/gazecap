@@ -134,16 +134,16 @@ class gazecap_model(pl.LightningModule):
         imFace, imEyeL, imEyeR, faceGrid, y = batch
         y_hat = self(imFace, imEyeL, imEyeR, faceGrid)
         loss = F.mse_loss(y_hat, y)
-        self.log('train_loss', loss, on_step=True, on_epoch=True, prog_bar=True, logger=True)
-        self.logger.experiment.log_metric('train_loss', loss)
+        self.log('train_loss', loss.item(), on_step=True, on_epoch=True, prog_bar=True, logger=True)
+        self.logger.experiment.log_metric('train_loss', loss.item())
         return loss
     
     def validation_step(self, batch, batch_idx):
         imFace, imEyeL, imEyeR, faceGrid, y = batch
         y_hat = self(imFace, imEyeL, imEyeR, faceGrid)
         val_loss = F.mse_loss(y_hat, y)
-        self.log('val_loss', val_loss, on_step=True, on_epoch=True, prog_bar=True, logger=True)
-        self.logger.experiment.log_metric('val_loss', val_loss)
+        self.log('val_loss', val_loss.item(), on_step=True, on_epoch=True, prog_bar=True, logger=True)
+        self.logger.experiment.log_metric('val_loss', val_loss.item())
         return val_loss
     
     def configure_optimizers(self):
